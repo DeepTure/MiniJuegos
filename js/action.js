@@ -21,7 +21,7 @@ var y=0;
 function createPlayer(){
 	x = Math.random()*590;
 	y = Math.random()*590;
-	ctx.fillStyle = "blue";
+	ctx.fillStyle = "green";
 	ctx.fillRect(x,y,10,10);
 	placeX[placeX.legth+1] = x;
 	placeY[placeY.legth+1] = y;
@@ -53,7 +53,98 @@ function deleteCola(){
 	ctx.clearRect(0,0, canvas.width, canvas.height);
 }
 
-function movement(){
+
+class objeto {
+	constructor(){
+		this.tamano = tamano;
+	}
+	choque(obj){
+		var difx = Math.abs(this.x - obj.x);
+		var dify = Math.abs(this.y - obj.y);
+		if(difx >= 0 && difx < tamano && dify >= 0 && dify < tamano){
+			return true;
+		} else {
+			return false;
+		}
+	}
+}
+
+class Cola extends objeto {
+	constructor(x,y){
+		super();
+		this.x = x;
+		this.y = y;
+		this.siguiente = null;
+	}
+	dibujar(ctx){
+		if(this.siguiente != null){
+			this.siguiente.dibujar(ctx);
+		}
+		ctx.fillStyle = "#0000FF";
+		ctx.fillRect(this.x, this.y, this.tamano, this.tamano);
+	}
+	setxy(x,y){
+		if(this.siguiente != null){
+			this.siguiente.setxy(this.x, this.y);
+		}
+		this.x = x;
+		this.y = y;
+	}
+	meter(){
+		if(this.siguiente == null){
+			this.siguiente = new Cola(this.x, this.y);
+		} else {
+			this.siguiente.meter();
+		}
+	}
+	verSiguiente(){
+		return this.siguiente;
+	}
+}
+var cabeza = new Cola(20,20);
+var comida = new Comida();
+var ejex = true;
+var ejey = true;
+var xdir = 0;
+var ydir = 0;
+
+function findeJuego(){
+	xdir = 0;
+	ydir = 0;
+	ejex = true;
+	ejey = true;
+	cabeza = new Cola(20,20);
+	comida = new Comida();
+	alert("Perdiste");
+}
+function choquepared(){
+	if(cabeza.x < 0 || cabeza.x > 590 || cabeza.y < 0 || cabeza.y > 590){
+		findeJuego();
+	}
+}
+function choquecuerpo(){
+	var temp = null;
+	try{
+		temp = cabeza.verSiguiente().verSiguiente();
+	}catch(err){
+		temp = null;
+	}
+	while(temp != null){
+		if(cabeza.choque(temp)){
+			//fin de juego
+			findeJuego();
+		} else {
+			temp = temp.verSiguiente();
+		}
+	}
+}
+
+ function main(){
+ 	createPlayer();
+
+ }
+
+ function movement(){
 	up=true;
 	down=true;
 	left=true;
@@ -72,6 +163,7 @@ function movement(){
 			placeX[placeX.legth+1] = x;
 			placeY[placeY.legth+1] = y;
 			collisions();
+			choquecuerpo()
 		} 
 		if(event.keyCode==100 && right==true && x<587){
 			if(modet==false){
@@ -86,6 +178,7 @@ function movement(){
 			placeX[placeX.legth+1] = x;
 			placeY[placeY.legth+1] = y;
 			collisions();
+			choquecuerpo()
 		}
 		if(event.keyCode==97 && left==true && x>-2){
 			if(modet==false){
@@ -100,6 +193,7 @@ function movement(){
 			placeX[placeX.legth+1] = x;
 			placeY[placeY.legth+1] = y;
 			collisions();
+			choquecuerpo()
 		}
 		if(event.keyCode==115 && down==true && y<590){
 			if(modet==false){
@@ -114,15 +208,13 @@ function movement(){
 			placeX[placeX.legth+1] = x;
 			placeY[placeY.legth+1] = y;
 			collisions();
+			choquecuerpo()
 		}
 	});
 	
 }
 
- function main(){
- 	createPlayer();
 
- }
  createPlayer();
 movement();
 
