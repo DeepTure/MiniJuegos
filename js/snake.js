@@ -17,10 +17,21 @@ class objeto {
 		var dify = Math.abs(this.y - obj.y);
 		if(difx >= 0 && difx < tamano && dify >= 0 && dify < tamano){
 			return true;
+			comidas=0;
 		} else {
 			return false;
 		}
 	}
+}
+
+function food() {
+	var canvas2 = document.querySelector("#canvas");
+	var ctx2 = canvas2.getContext("2d");
+	var aux = Math.random()*590;
+	var aux2 = Math.random()*590;
+
+	ctx2.fillStyle = "black";
+	ctx2.fillRect(aux,aux2,10,10);
 }
 
 class Cola extends objeto {
@@ -29,6 +40,15 @@ class Cola extends objeto {
 		this.x = x;
 		this.y = y;
 		this.siguiente = null;
+	}
+	borrar(){
+		var canvas2 = document.querySelector("#canvas");
+		var ctx2 = canvas2.getContext("2d");
+		var aux = Math.random()*590;
+		var aux2 = Math.random()*590;
+
+		ctx2.fillStyle = "black";
+		ctx2.fillRect(aux,aux2,10,10);
 	}
 	dibujar(ctx){
 		if(this.siguiente != null){
@@ -54,6 +74,29 @@ class Cola extends objeto {
 	verSiguiente(){
 		return this.siguiente;
 	}
+}
+
+function createPlayer(){
+	x = Math.random()*590;
+	y = Math.random()*590;
+	ctx.fillStyle = "green";
+	ctx.fillRect(x,y,10,10);
+	placeX[placeX.legth+1] = x;
+	placeY[placeY.legth+1] = y;
+}
+
+function collisions(){
+	console.log(x+"<br>"+y+"<br>");
+	//if(x<=-2 || x>=587 || y>=590 || y<=0)
+
+	for (var i=0; i>=placeX.legth;i++) {
+		if(placeX[i]>x-10 && placeX<x+10){
+			if (placeY[i]<y+10 && placeY[i]>y-10){
+				alert("perdiste");
+			}
+		}
+	}
+		
 }
 
 class Comida extends objeto {
@@ -87,6 +130,12 @@ function movimiento(){
 	var ny = cabeza.y+ydir;
 	cabeza.setxy(nx,ny);
 }
+
+function deleteCola(){
+	ctx.clearRect(0,0, canvas.width, canvas.height);
+}
+
+
 function control(event){
 	var cod = event.keyCode;
 	if(ejex){
@@ -132,6 +181,29 @@ function choquepared(){
 	if(cabeza.x < 0 || cabeza.x > 590 || cabeza.y < 0 || cabeza.y > 590){
 		findeJuego();
 	}
+}
+
+function createPlayer(){
+	x = Math.random()*590;
+	y = Math.random()*590;
+	ctx.fillStyle = "green";
+	ctx.fillRect(x,y,10,10);
+	placeX[placeX.legth+1] = x;
+	placeY[placeY.legth+1] = y;
+}
+
+function collisions(){
+	console.log(x+"<br>"+y+"<br>");
+	//if(x<=-2 || x>=587 || y>=590 || y<=0)
+
+	for (var i=0; i>=placeX.legth;i++) {
+		if(placeX[i]>x-10 && placeX<x+10){
+			if (placeY[i]<y+10 && placeY[i]>y-10){
+				alert("perdiste");
+			}
+		}
+	}
+		
 }
 function choquecuerpo(){
 	var temp = null;
