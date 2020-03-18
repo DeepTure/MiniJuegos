@@ -1,0 +1,113 @@
+*{
+	font-family: Monaco, Consolas, "Lucida Console", monospace;
+	margin :0;
+	padding: 0;
+	box-sizing: border-box; 
+	transition: all 0.30s linear;
+}
+.pagina{
+	width: 100%;
+	max-width: 1354px;
+	margin: 0 auto;
+}
+
+body{
+	background-image: url(../img/imagen1.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	color: white;
+}
+.titulo .gamestyle{
+	margin: 0;
+	width: 51.6%;
+	height: 100px;
+	display: flex;
+	text-align: justify;
+}
+
+.topics{
+	padding-left: 50px;
+	width: 36.9%;
+	height: 500px;
+	text-align: justify;
+}
+
+.titulo .AHORCADO{
+	background-color: black;
+	font-size: 4em;
+	text-align: center;
+	border: 5px solid orange;
+}
+
+.contein{
+	width:96%;
+	display: flex;
+	margin: 10px;
+	
+}
+
+.visuales{
+	color: transparent;
+}
+
+.wordingame{
+	width: 90%;
+	text-align: center;
+	padding-top: 2em;
+}
+
+.virusinfected{
+	background-color: black;
+	opacity: 50%;
+	font-size: 24px;
+	color: white;
+}
+
+.start{
+	width: 100px;
+	height: 100px;
+	margin-top: 30px;
+	background-color: green;
+	border: 0px solid transparent;
+	font-size: 20px;
+	transition: all 0.30s linear;
+}
+
+.start:hover{
+	background: blue;
+	width: 125px;
+	height: 125px;
+	font-size: 25px;
+	border-radius: 50%;
+}
+
+.form{
+	font-size:24px;
+	color: red;
+	background: white;
+	border: 10px solid red;
+	width: 500px;
+	text-align: center;
+}
+
+.letra{
+	width: 30px;
+	height: 30px;
+	margin-right: 5px;
+	margin-top:  5px;
+	background-color: #4B3B47;
+	color: #E0D8DE;
+	font-size: 18px;
+	transition: all 0.30s linear;
+}
+
+.letra:hover{
+	background: white;
+	border: 0px solid transparent;
+	color: red;
+}
+
+.palabra{
+	letter-spacing: 15px;
+	font-size: 100px;
+}
