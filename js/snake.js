@@ -1,7 +1,8 @@
 //Variables globales
 var velocidad = 80;
 var tamano = 10;
-var comidas=0
+var comidas = 0;
+var comidamax = 0;
 
 function ajs(){
 	velocidad=parseFloat(document.ajustes.fast.value);
@@ -12,15 +13,21 @@ class objeto {
 		this.tamano = tamano;
 	}
 	choque(obj){
-		document.ajustes.record.value=comidas;
+		score(comidas+1)
 		var difx = Math.abs(this.x - obj.x);
 		var dify = Math.abs(this.y - obj.y);
 		if(difx >= 0 && difx < tamano && dify >= 0 && dify < tamano){
 			return true;
-			comidas=0;
 		} else {
 			return false;
 		}
+	}
+}
+
+function score(puntaje) {
+	if(puntaje>comidamax){
+		document.ajustes.record.value=comidas;
+		comidamax=comidas
 	}
 }
 
@@ -175,7 +182,8 @@ function findeJuego(){
 	ejey = true;
 	cabeza = new Cola(20,20);
 	comida = new Comida();
-	alert("Perdiste, tu record es: "+comidas);
+	comidas=0;
+	alert("Perdiste, tu record es: "+comidamax);
 }
 function choquepared(){
 	if(cabeza.x < 0 || cabeza.x > 590 || cabeza.y < 0 || cabeza.y > 590){
@@ -230,12 +238,14 @@ function dibujar(){
 	cabeza.dibujar(ctx);
 	comida.dibujar(ctx);
 }
+
 function main(){
 	choquecuerpo();
 	choquepared();
 	dibujar();
 	movimiento();
 	if(cabeza.choque(comida)){
+
 		comidas+=1;
 		comida.colocar();
 		cabeza.meter();
