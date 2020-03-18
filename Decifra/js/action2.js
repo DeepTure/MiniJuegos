@@ -8,7 +8,6 @@ var buttons = document.getElementsByClassName('letra');
 function seleccion(){
 	var aleatorio = Math.floor(Math.random()*(palabras.length));
 	palabra = palabras[aleatorio];
-	alert(palabra);
 	huecos();
 	imagenes();
 	generar();
