@@ -4,9 +4,6 @@ var tamano = 10;
 var comidas = 0;
 var comidamax = 0;
 
-function ajs(){
-	velocidad=parseFloat(document.ajustes.fast.value);
-}
 
 class objeto {
 	constructor(){

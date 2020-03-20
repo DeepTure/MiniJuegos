@@ -16,7 +16,7 @@ html, body{
 	padding: 0.5rem;
 	border: 1px solid black;
 	width: 25rem;
-	height: 15rem;
+	height: 17rem;
 }
 
 .bt{
@@ -54,6 +54,7 @@ html, body{
 .Dice.Hi:hover{
 	width: 8rem;
 	height: 8rem;
+	cursor: pointer;
 }
 
 /* left + 8.8, bottom + 4.7 */

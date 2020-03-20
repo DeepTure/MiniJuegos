@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Monopoly</title>
+	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<style type="text/css">
 		.bg-way{
@@ -18,7 +19,7 @@
 	</style>
 </head>
 <body class="bg-way">
-	<nav class="Menu">
+	<form class="Menu" name="Menu">
 		Mini Monopoli
 		<br>
 		<br>
@@ -37,16 +38,19 @@
 		Encuentra el tesoro
 		<br>
 		<br>
-		<input type="button" name="btn" class="bt" value="Tirar dado">
-	</nav>
+		Casilla en la que se encuentra: 
+		<input type="text" name="numeroCasilla" readonly="readonly" value="0">
+		<br><br>
+		<input type="button" name="btn" class="bt" value="Tirar dado" onclick="generateNumber()">
+	</form>
 
 	<section>
 		<img src="Img/Player.png" class="Player Jum">
 	</section>
 	<section>
-		<img src="Img/Dice.png" class="Dice Hi">
+		<img src="Img/Dice.png" class="Dice Hi" onclick="generateNumber()">
 	</section>
 
-	<script type="text/javascript" src="JS/actions.js"></script>
+	<script type="text/javascript" src="js/indexAction.js"></script>
 </body>
 </html>
