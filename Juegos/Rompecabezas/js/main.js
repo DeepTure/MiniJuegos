@@ -86,6 +86,7 @@ function testing() {
 		}
 	}
 	if(bien_ubicada == 9){
-		//aqui va el regreso al index;
+		alert("Ganaste");
+		window.location.assign("index.html")
 	}
 }
