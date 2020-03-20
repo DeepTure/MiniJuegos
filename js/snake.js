@@ -181,6 +181,7 @@ function findeJuego(){
 	comida = new Comida();
 	comidas=0;
 	alert("Perdiste, tu record es: "+comidamax);
+	window.location.assign("index.html")
 }
 function choquepared(){
 	if(cabeza.x < 0 || cabeza.x > 590 || cabeza.y < 0 || cabeza.y > 590){
