@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Monopoly</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+	<link rel="shortcut icon" href="Img/Monopoly.ico" />
+	<style type="text/css">
+		.bg-way{
+			margin: 0;
+			background-image: url('Img/-1.png');
+			background-size: 100%;
+			background-repeat: no-repeat;
+			background-position: 0 0;
+			background-attachment: fixed;
+			background-size: cover;
+			height: 97%;
+			width: 100%;
+		}
+		a{
+			text-decoration: none;
+			color: black;
+		}
+	</style>
+</head>
+<body class="bg-way" id="Font">
+	<form class="Menu" name="Menu">
+		<p class="title" style="margin-top: 0%;">
+			Mini Monopoly
+		</p>
+		<p class="atxt">
+			Juegos:
+			<br>
+			<a href="Juegos/snake/snake.html">Snake</a>
+			<br>
+			Flappy Cube
+			<br>
+			Rompecabezas
+			<br>
+			Ahorcado
+			<br>
+			Question Maze
+			<br>
+			Encuentra el tesoro
+			<br>
+			<br>
+			Puntos ganados: <input type="text" name="points" readonly="readonly" value="0">
+			<br><br>
+			<!--Casilla en la que se encuentra: 
+			<input type="text" name="numeroCasilla" readonly="readonly" value="0">
+			<br>
+			<br>-->
+			<input type="button" name="btn" class="bt" value="Tirar dado" onclick="generateNumber()">
+		</p>
+	</form>
+
+	<section>
+		<img src="Img/Dice.png" class="Dice Hi" onclick="generateNumber()">
+	</section>
+
+	<script type="text/javascript" src="JS/indexAction.js"></script>
+</body>
+</html>
