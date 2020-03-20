@@ -87,7 +87,7 @@ function testing() {
 	}
 	if(bien_ubicada == 9){
 		alert("Ganaste");
-		window.location.assign("../Index.html")
+		window.location.assign("../../index.html")
 	}
 }
 
