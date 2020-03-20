@@ -354,7 +354,7 @@ function getLevelD() {
 }
 function backMenu() {
 	alert("Incorrecto, regresando al monopoly, tu puntuación fue de: "+Level);
-	window.location.href = "../../Index.html";
+	window.location.href = "../../index.html";
 	//esta linea manda los puntos ganados
 	var aux = localStorage.getItem("puntos");
 	aux=parseInt(aux)+parseInt(Level);
@@ -420,7 +420,7 @@ function ChBToNxLevelS() {
 }
 function getOutFromHere(){
 	alert("Regresando al monopoly, tu puntuación fue de: "+Level);
-	window.location.href = "../../Index.html";
+	window.location.href = "../../index.html";
 	//esta linea manda los puntos ganados
 	var aux = localStorage.getItem("puntos");
 	aux=parseInt(aux)+parseInt(Level);
