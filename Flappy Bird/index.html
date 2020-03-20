@@ -101,11 +101,17 @@
             }
         }
         if(gameOver){
-            alert("Tu puntaje final fue: "+areaJuego.noFrame)
-            clearInterval(areaJuego.intervalo);
+            if(areaJuego.noFrame<3000){
+                alert("Fallaste\nTu puntaje final fue: "+areaJuego.noFrame)
+                window.location.assign("../index2.html")
+            }else{
+                alert("Ganaste\nTu puntaje final fue: "+areaJuego.noFrame)
+                window.location.assign("../index2.html")
+            }
+            /*clearInterval(areaJuego.intervalo);
             areaJuego.recargar();
             gameOver=false;
-            juego();
+            juego();*/
         }else{
             areaJuego.recargar();
             areaJuego.noFrame += 1;
