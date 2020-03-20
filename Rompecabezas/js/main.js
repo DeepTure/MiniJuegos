@@ -86,6 +86,6 @@ function testing() {
 		}
 	}
 	if(bien_ubicada == 9){
-		win.play();
+		//aqui va el regreso al index;
 	}
 }
