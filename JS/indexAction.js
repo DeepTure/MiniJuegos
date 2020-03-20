@@ -95,7 +95,7 @@ function changePage(number){
 		window.location.assign("Juegos/Decifra/Ahorcado.html")
 
 	}else if(localStorage.getItem("casilla")==5){
-		window.location.assign("Juegos/Encuentra_el_Tesoro/index.html")
+		window.location.assign("Juegos/Encuentra_el_Tesoro/indexEET.html")
 
 	}else if(localStorage.getItem("casilla") == 6){
 		window.location.assign("Juegos/QuestionMazeR/QuestionMaze.html")
