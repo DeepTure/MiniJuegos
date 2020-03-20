@@ -29,5 +29,6 @@ $map.addEventListener('click', function (e) {
   if (distance < 20 ) {
     alert(`Encontraste el tesoro en  ${clicks} clicks! :D`);
     location.reload();
+    window.location.assign("index.html")
   }
 });
