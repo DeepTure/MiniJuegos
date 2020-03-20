@@ -3,6 +3,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Flappy Cube</title>
     </head>
     <body onload="juego()">
     <canvas id="canvas" width="480" height="270">
@@ -104,11 +105,11 @@
             if(areaJuego.noFrame<3000){
                 alert("Fallaste\nTu puntaje final fue: "+areaJuego.noFrame)
                 clearInterval(areaJuego.intervalo);
+                clearInterval(areaJuego.intervalo);
+                areaJuego.recargar();
+                gameOver=false;
+                juego();
                 //esta linea nos da el valor si ganas o pierdas
-                var aux = localStorage.getItem("puntos")
-                aux = parseInt(aux)+5
-                localStorage.setItem("puntos",aux)
-                window.location.assign("../../index.html")
             }else{
                 alert("Ganaste\nTu puntaje final fue: "+areaJuego.noFrame)
                 clearInterval(areaJuego.intervalo);
