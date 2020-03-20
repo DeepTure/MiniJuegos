@@ -54,8 +54,9 @@ function imagenes(){
 	if (cont==0) {
 		document.getElementById("visual").innerHTML -="<img src='img/inicio6.png' alt='' id='imagen1'>";
 		document.getElementById("visual").innerHTML +="<img src='img/error.png' alt='' id='imagen0'>";
-		alert("La palabra era: "+palabra);
-		window.location.assign("../../Index.html");
+		alert("¡Perdiste! La palabra era: "+palabra);
+		setTimeout(function(){lose()},1500);
+		
 	}
 	if (cont==100) {
 		document.getElementById("visual").innerHTML -="<img src='img/inicio1.png' alt='' id='imagen6'>";
@@ -65,8 +66,17 @@ function imagenes(){
 		document.getElementById("visual").innerHTML -="<img src='img/inicio5.png' alt='' id='imagen2'>";
 		document.getElementById("visual").innerHTML -="<img src='img/inicio6.png' alt='' id='imagen1'>";
 		document.getElementById("visual").innerHTML +="<img src='img/winner.png' alt='' id='imagen100'>";
-		window.location.assign("../../Index.html");
+		alert("Bien has decifrado el codigo ¡Felicitaciones!")
+		setTimeout(function(){win()},1500);
+		
 	}
+}
+	
+function lose() {
+	window.location.assign("../../index.html")
+}
+function win() {
+	window.location.assign("../../index.html")
 }
 
 
@@ -104,5 +114,7 @@ function final(){
 	}
    
 }
+
+
 
 
