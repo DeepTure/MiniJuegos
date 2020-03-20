@@ -34,6 +34,6 @@ $map.addEventListener('click', function (e) {
     aux = parseInt(aux)+10
     localStorage.setItem("puntos",aux)
 
-    window.location.assign("../../Index.html")
+    window.location.assign("../../index.html")
   }
 });
