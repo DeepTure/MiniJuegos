@@ -1,0 +1,263 @@
+*{
+	font-family: Arial;
+}
+
+html, body{
+	width: 100%;
+	height: 90%;
+}
+
+a{
+	text-decoration: none;
+}
+
+.Menu{
+	text-align: center;
+	color: white;
+	width: 99%;
+}
+
+.MMenu{
+	margin-left: 10%;
+	margin-top: 6%;
+	width: 80%;
+	height: 90%;
+	text-align: center;
+	background-color: black;
+	color: white;
+	opacity: 80%;
+}
+
+.Qust{
+	margin-left: 3%;
+	margin-top: 6%;
+	width: 93.6%;
+	height: 90%;
+	text-align: center;
+	color: black;
+	display: inline-block;
+}
+
+/* 13 Custom */
+@media screen and (min-width: 200px) {
+	.title{
+		font-size: 0.6rem;
+	}
+	.subtitle{
+		font-size: 0.42rem;
+	}
+	.space{
+		font-size: 0.2rem;	
+	}
+	.atxt{
+		font-size: 0.42rem;
+	}
+}
+
+/* 12 Custom */
+@media screen and (min-width: 800px) {
+	.title{
+		font-size: 1.25rem;
+	}
+	.subtitle{
+		font-size: 0.9rem;
+	}
+	.space{
+		font-size: 0.9rem;	
+	}
+	.atxt{
+		font-size: 0.9rem;
+	}
+}
+
+/* 11 Custom */
+@media screen and (min-width: 1000px) {
+	.title{
+		font-size: 1.42rem;
+	}
+	.subtitle{
+		font-size: 0.9rem;
+	}
+	.space{
+		font-size: 0.9rem;	
+	}
+	.atxt{
+		font-size: 0.9rem;
+	}
+}
+
+/* 10 Custom */
+@media screen and (min-width: 1200px) {
+	.title{
+		font-size: 1.65rem;
+	}
+	.subtitle{
+		font-size: 1rem;
+	}
+	.space{
+		font-size: 1rem;	
+	}
+	.atxt{
+		font-size: 1rem;
+	}
+}
+
+/* 9 Custom */
+@media screen and (min-width: 1400px) {
+	.title{
+		font-size: 1.95rem;
+	}
+	.subtitle{
+		font-size: 1.33rem;
+	}
+	.space{
+		font-size: 1.33rem;	
+	}
+	.atxt{
+		font-size: 1.33rem;
+	}
+}
+
+/* 8 Custom */
+@media screen and (min-width: 1600px) {
+	.title{
+		font-size: 2.15rem;
+	}
+	.subtitle{
+		font-size: 1.5rem;
+	}
+	.space{
+		font-size: 1.5rem;	
+	}
+	.atxt{
+		font-size: 1.5rem;
+	}
+}
+
+/* 7 Custom */
+@media screen and (min-width: 1800px) {
+	.title{
+		font-size: 2.3rem;
+	}
+	.subtitle{
+		font-size: 1.6rem;
+	}
+	.space{
+		font-size: 1.6rem;	
+	}
+	.atxt{
+		font-size: 1.6rem;
+	}
+}
+
+/* 6 Custom */
+@media screen and (min-width: 2000px) {
+	.title{
+		font-size: 2.5rem;
+	}
+	.subtitle{
+		font-size: 1.75rem;
+	}
+	.space{
+		font-size: 1.75rem;	
+	}
+	.atxt{
+		font-size: 1.75rem;
+	}
+}
+
+/* 5 Custom */
+@media screen and (min-width: 2200px) {
+	.title{
+		font-size: 2.7rem;
+	}
+	.subtitle{
+		font-size: 1.9rem;
+	}
+	.space{
+		font-size: 1.9rem;	
+	}
+	.atxt{
+		font-size: 1.9rem;
+	}
+}
+
+/* 4 Custom */
+@media screen and (min-width: 2500px) {
+	.title{
+		font-size: 2.9rem;
+	}
+	.subtitle{
+		font-size: 2rem;
+	}
+	.space{
+		font-size: 2rem;	
+	}
+	.atxt{
+		font-size: 2rem;
+	}
+}
+
+/* 3 Custom */
+@media screen and (min-width: 2800px) {
+	.title{
+		font-size: 3.2rem;
+	}
+	.subtitle{
+		font-size: 2.24rem;
+	}
+	.space{
+		font-size: 2.24rem;	
+	}
+	.atxt{
+		font-size: 2.24rem;
+	}
+}
+
+/* 2 Custom */
+@media screen and (min-width: 3000px) {
+	.title{
+		font-size: 4.25rem;
+	}
+	.subtitle{
+		font-size: 3.15rem;
+	}
+	.space{
+		font-size: 3.15rem;	
+	}
+	.atxt{
+		font-size: 3.15rem;
+	}
+}
+
+/* 1 (7x0.572)x6m + Custom */
+@media screen and (min-width: 4500px) {
+	.title{
+		font-size: 6.4rem;
+	}
+	.subtitle{
+		font-size: 4.48rem;
+	}
+	.space{
+		font-size: 4.48rem;	
+	}
+	.atxt{
+		font-size: 4.48rem;
+	}
+}
+
+/* 0 Custom */
+@media screen and (min-width: 6000px) {
+	.title{
+		font-size: 8.5rem;
+	}
+	.subtitle{
+		font-size: 6rem;
+	}
+	.space{
+		font-size: 6rem;	
+	}
+	.atxt{
+		font-size: 6rem;
+	}
+}

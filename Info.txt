@@ -1,0 +1,42 @@
+Renombramientos:
+	/css a /CSS
+	/img a /Img
+	/js a /JS
+	/Encuentra el tesoro a /Encuentra_el_tesoro
+	/Flappy Bird a /Flappy_Bird
+	index.html a Index.html
+	
+Carpetas creadas:
+	/Juegos
+	/Juegos/Snake
+	/Juegos/Snake/js
+
+Movimientos:
+	/Encuentra_el_tesoro a /Juegos/Encuentra_el_tesoro
+	/Flappy_Bird a /Juegos/Flappy_Bird
+	/Decifra a /Juegos/Decifra
+	/Rompecabezas a /Juegos/Rompecabezas
+
+Modificaciones en codigo:
+	/Juegos/Snake/js/snake.js:
+		Linea 184, cambio de referencia:
+			window.location.assign("index.html")
+			a
+			window.location.assign("../../index.html")
+	
+	/Juegos/Flappy_Bird/index.html:
+		Lineas 106 y 109, cambio de referencia:
+			window.location.assign("../index2.html")
+			a
+			window.location.assign("../../Index.html")
+	
+	/Juegos/Decifra/js/action2.js:
+		Lineas 58 y 68, cambio de referencia:
+			window.location.assign("index.html")
+			a
+			window.location.assign("../../Index.html")
+		Yo creo que hay que darle tiempo, sale a lo bestia :v, no te deja ver si ganaste
+
+	/Index.html:
+		Cambio de referencias
+		
