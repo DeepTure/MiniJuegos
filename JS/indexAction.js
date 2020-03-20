@@ -1,5 +1,6 @@
 //esta variable es la que en todo momebto llevará el conteo de en que casilla se encuentra el jugador
 var casilla=0
+var puntos=0
 before();
 
 //Modifique los textos xD (de los alert)
@@ -11,18 +12,29 @@ function generateNumber() {
 	//si es la primera vez que el jugador tira el dado pasa esto
 	if(casilla==0){
 		alert("El dado dice: "+number)
+		localStorage.setItem("puntos",0);
+		savePoints();
 		casilla = number;
 		if (casilla>6){
 			alert("Felicidades terminaste el juego, se reiniciará su posicion en el tablero")
 			localStorage.setItem("casilla",0);
+			localStorage.setItem("puntos",0);
+			puntos=0
+			// Añadi el cambio de fondo cuando ganas
+			document.getElementById("Font").style.backgroundImage = "url('Img/-1.png')";
 		}
 			changePage(number)
 	}else{//si no es la porimera vez pasara esto
 		casilla+=number
+		savePoints();
 		alert("El dado dice: "+number)
 		if (casilla>6){
 			alert("Felicidades terminaste el juego, se reiniciará su posicion en el tablero")
 			localStorage.setItem("casilla",0);
+			localStorage.setItem("puntos",0);
+			puntos=0
+			// Añadi el cambio de fondo cuando ganas
+			document.getElementById("Font").style.backgroundImage = "url('Img/-1.png')";
 		}
 		changePage(casilla)
 	}
@@ -43,6 +55,12 @@ function before(){
 		document.getElementById("Font").style.backgroundImage = "url('Img/-1.png')";
 
 		localStorage.setItem("casilla",0);
+		localStorage.setItem("puntos",0);
+		puntos=0
+	}
+	if(localStorage.getItem("puntos")){
+		puntos = localStorage.getItem("puntos")
+		document.Menu.points.value=puntos;
 	}
 	if (localStorage.getItem("casilla")){
 		refresh();
@@ -79,7 +97,7 @@ function before(){
 function changePage(number){
 	//window.location.assign("snake.html")
 	saveLocalStorage(casilla);
-
+	savePoints();
 	//Cambie las referencias
 
 	if(localStorage.getItem("casilla")==1){
@@ -104,4 +122,8 @@ function changePage(number){
 //esta funcion va a refrescar el valor de la casilla cada vez que se entre a la pagina
 function refresh(){
 	casilla =parseInt(localStorage.getItem("casilla"));
+}
+
+function savePoints(){
+	localStorage.setItem("puntos",puntos);
 }

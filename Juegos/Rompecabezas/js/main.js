@@ -90,3 +90,12 @@ function testing() {
 		window.location.assign("../Index.html")
 	}
 }
+
+//esta funcion es para que el player pueda regresar al menú
+function exit(){
+	var aux = localStorage.getItem("puntos")
+	aux = parseInt(aux)+5
+	localStorage.setItem("puntos",aux);
+
+	window.location.assign("../../index.html")
+}

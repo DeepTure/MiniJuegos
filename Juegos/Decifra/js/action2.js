@@ -56,6 +56,10 @@ function imagenes(){
 		document.getElementById("visual").innerHTML +="<img src='img/error.png' alt='' id='imagen0'>";
 		alert("¡Perdiste! La palabra era: "+palabra);
 		setTimeout(function(){lose()},1500);
+		//linea de puntuaciones
+		var aux=localStorage.getItem("puntos");
+		aux=parseInt(aux)+5
+		localStorage.setItem("puntos",aux)
 		
 	}
 	if (cont==100) {
@@ -68,7 +72,10 @@ function imagenes(){
 		document.getElementById("visual").innerHTML +="<img src='img/winner.png' alt='' id='imagen100'>";
 		alert("Bien has decifrado el codigo ¡Felicitaciones!")
 		setTimeout(function(){win()},1500);
-		
+		//linea de puntuaciones
+		var aux=localStorage.getItem("puntos");
+		aux=parseInt(aux)+10
+		localStorage.setItem("puntos",aux)
 	}
 }
 	

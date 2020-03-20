@@ -104,10 +104,17 @@
             if(areaJuego.noFrame<3000){
                 alert("Fallaste\nTu puntaje final fue: "+areaJuego.noFrame)
                 clearInterval(areaJuego.intervalo);
+                //esta linea nos da el valor si ganas o pierdas
+                var aux = localStorage.getItem("puntos")
+                aux = parseInt(aux)+5
+                localStorage.setItem("puntos",aux)
                 window.location.assign("../../index.html")
             }else{
                 alert("Ganaste\nTu puntaje final fue: "+areaJuego.noFrame)
                 clearInterval(areaJuego.intervalo);
+                var aux = localStorage.getItem("puntos")
+                aux = parseInt(aux)+10
+                localStorage.setItem("puntos",aux)
                 window.location.assign("../../index.html")
             }
             /*clearInterval(areaJuego.intervalo);

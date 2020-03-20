@@ -181,6 +181,8 @@ function findeJuego(){
 	comida = new Comida();
 	comidas=0;
 	alert("Perdiste, tu record es: "+comidamax);
+	var aux3=localStorage.getItem("puntos")
+	localStorage.setItem("puntos",parseInt(aux3)+10)
 	window.location.assign("../../index.html")
 }
 function choquepared(){

@@ -4,6 +4,17 @@
 	<meta charset="UTF-8">
 	<title>Rompecabezas</title>
 	<link rel="stylesheet" href="css/main.css">
+
+	<style type="text/css">
+		.btn{
+			height: 15%;
+			position: relative;
+			display: inline-block;
+			left: 80%;
+			bottom: 150px;
+		}
+	</style>
+
 </head>
 <body>
 	<svg width="600" height="600" id="entorno">
@@ -19,6 +30,9 @@
 			<g><image xlink:href="img/img9.png" class="movil"></g>	
 			
 		</svg>
+
+		<input type="button" class="btn" name="exit" value="Regresar al menú" onclick="exit()">
+
 		<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

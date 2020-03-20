@@ -29,6 +29,11 @@ $map.addEventListener('click', function (e) {
   if (distance < 20 ) {
     alert(`Encontraste el tesoro en  ${clicks} clicks! :D`);
     location.reload();
+    //mandar puntuaciones
+    var aux = localStorage.getItem("puntos");
+    aux = parseInt(aux)+10
+    localStorage.setItem("puntos",aux)
+
     window.location.assign("../../Index.html")
   }
 });
